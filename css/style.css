@@ -25,7 +25,7 @@ a:hover {
 
 /* --- Global Layout Containers --- */
 header, main, footer {
-    max-width: 800px; /* Reduced max-width for better readability without sidebar */
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -121,13 +121,45 @@ p {
     letter-spacing: 0.5px;
 }
 
-/* --- Footer --- */
-footer {
-    border-top: 1px solid #e5e5e5;
-    text-align: center;
-    font-size: 13px;
-    color: #777777;
-    margin-top: 60px;
-    padding-top: 30px;
-    padding-bottom: 40px;
+/* --- Contact Form Layout --- */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.submit-btn {
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.submit-btn:hover {
+    background-color: #333333;
 }
