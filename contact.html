@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Gaming Blog</title>
+    <title>Gaming Blog - Contact</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header>
-        <h1 class="site-title">Gaming Blog</h1>
+        <h1 class="site-title">Gaming <span>Blog</span></h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -22,31 +23,58 @@
     </header>
 
     <main class="main-layout">
-        <section>
-            <h2>Contact Us</h2>
-            <div class="featured-post">
-                <p style="margin-bottom: 20px;">Have a question, feedback, or a business inquiry? Fill out the form below to get in touch with the site administrator.</p>
 
-                <form action="#" method="post">
+        <!-- Requirement #12: Social Media Section -->
+        <section>
+            <h2>Our Social Media</h2>
+            <div class="social-links-card">
+                <p>Follow our official channels for real-time channel updates, development streams, and community discussions:</p>
+                <div class="social-grid">
+                    <a href="#" target="_blank" class="social-box tw">
+                        <i class="fa-brands fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#" target="_blank" class="social-box ds">
+                        <i class="fa-brands fa-discord"></i>
+                        <span>Discord</span>
+                    </a>
+                    <a href="#" target="_blank" class="social-box yt">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="#" target="_blank" class="social-box gh">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requirement #11: Support Form Submission -->
+        <section>
+            <h2>Contact Support</h2>
+            <div class="featured-post">
+                <form action="#" method="POST">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required placeholder="name@example.com">
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <label for="message">Message / Inquiry</label>
+                        <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
                     </div>
 
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" class="submit-btn">Submit Form</button>
                 </form>
             </div>
         </section>
+
     </main>
 
     <footer>
