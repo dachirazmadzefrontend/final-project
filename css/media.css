@@ -1,17 +1,92 @@
-@media (max-width: 640px) {
+@media screen and (max-width: 880px) {
+    main {
+        max-width: 100%;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .featured-post,
+    .post-item,
+    .social-links-card {
+        padding: 28px;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 640px) {
     header {
         flex-direction: column;
         gap: 16px;
         padding: 20px;
+        text-align: center;
     }
+
     nav {
-        gap: 4px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
     }
+
     nav a {
-        padding: 6px 10px;
+        padding: 6px 12px;
         font-size: 12px;
     }
-    .featured-post, .post-item {
-        padding: 28px;
+
+    main {
+        margin: 20px auto;
+    }
+
+    h3 {
+        font-size: 19px;
+        line-height: 1.4;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .social-box {
+        padding: 16px 10px;
+    }
+
+    .featured-post {
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    footer {
+        margin-top: 60px;
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        padding: 4px 8px;
+        font-size: 11px;
     }
 }
