@@ -5,12 +5,33 @@
     padding: 0;
 }
 
+/* --- WebKit Custom Scrollbar Styling --- */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the vertical scrollbar */
+    height: 10px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #0b0f19; /* Matches body background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1f2937; /* Smooth dark gray handle */
+    border: 2px solid #0b0f19; /* Creates a clean gap effect */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #818cf8; /* Turns vibrant indigo when dragged */
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: #0b0f19; /* Deep midnight blue body background that sets the tone */
     color: #f1f5f9; /* Off-white text for excellent dark-mode readability */
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
 }
 
 ::selection {
@@ -258,3 +279,30 @@ footer {
 .social-box.ds:hover { color: #5865f2; background-color: rgba(88, 101, 242, 0.05); border-color: rgba(88, 101, 242, 0.2); }
 .social-box.yt:hover { color: #ff0000; background-color: rgba(255, 0, 0, 0.05); border-color: rgba(255, 0, 0, 0.2); }
 .social-box.gh:hover { color: #ffffff; background-color: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.2); }
+
+/* --- Footer Logo Layout --- */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; /* Spacing between logo and copyright text */
+}
+
+.footer-logo {
+    height: 40px; /* Restricts height so it stays crisp and proportional */
+    width: auto;  /* Maintains original aspect ratio */
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* WebKit/Modern utility turns dark logos pure white to fit dark mode */
+    opacity: 0.8;
+    transition: opacity 0.25s ease;
+    -webkit-user-drag: none; /* WebKit specific: prevents dragging the logo image */
+}
+
+.logo-link {
+    display: inline-flex; /* Keeps the link box perfectly sized around the logo shape */
+    outline: none;
+}
+
+.footer-logo:hover {
+    opacity: 1;
+}
